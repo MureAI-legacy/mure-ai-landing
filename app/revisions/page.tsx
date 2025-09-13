@@ -12,7 +12,7 @@ export default function RevisionPolicyPage() {
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(163,230,53,0.10),transparent_55%)]" />
               <div className="relative space-y-12">
                 <header className="space-y-4">
-                  <h1 className="text-4xl font-bold tracking-tight text-lime-300">Revision Policy</h1>
+                  <h1 className="text-4xl font-bold tracking-tight text-brand-lime-300">Revision Policy</h1>
                   <p className="text-neutral-400 text-lg">
                     Our revision policy ensures transparency and fairness for all clients while maintaining the quality and efficiency of our work.
                   </p>
@@ -62,7 +62,7 @@ export default function RevisionPolicyPage() {
                     For questions regarding our revision policy, please contact us at:
                   </p>
                   <p className="text-neutral-300">
-                    Email: <a href="mailto:hello@theskitbit.com" className="text-lime-300 underline">hello@theskitbit.com</a>
+                    Email: <a href="mailto:hello@mureai.com" className="text-brand-lime-300 underline">hello@mureai.com</a>
                   </p>
                 </section>
               </div>

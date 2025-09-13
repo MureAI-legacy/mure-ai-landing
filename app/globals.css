@@ -4,6 +4,12 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Brand Colors */
+  --brand-lime: #fcd34d;
+  --brand-lime-300: #fcd34d;
+  --brand-lime-muted: rgba(245, 158, 11, 0.8);
+  --brand-lime-subtle: rgba(245, 158, 11, 0.3);
+  
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -120,6 +126,44 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Brand text colors */
+  .text-brand-lime {
+    color: var(--brand-lime);
+  }
+  .text-brand-lime-300 {
+    color: var(--brand-lime-300);
+  }
+  .text-brand-lime-muted {
+    color: var(--brand-lime-muted);
+  }
+  .text-brand-lime-subtle {
+    color: var(--brand-lime-subtle);
+  }
+  
+  /* Brand background colors */
+  .bg-brand-lime {
+    background-color: var(--brand-lime);
+  }
+  .bg-brand-lime-300 {
+    background-color: var(--brand-lime-300);
+  }
+  .bg-brand-lime-muted {
+    background-color: var(--brand-lime-muted);
+  }
+  .bg-brand-lime-subtle {
+    background-color: var(--brand-lime-subtle);
+  }
+  
+  /* Brand border colors */
+  .border-brand-lime {
+    border-color: var(--brand-lime);
+  }
+  .border-brand-lime-300 {
+    border-color: var(--brand-lime-300);
   }
 }
 

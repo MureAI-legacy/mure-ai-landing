@@ -4,8 +4,8 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions — Skitbit",
-  description: "Terms and conditions for Skitbit 3D animation services.",
+  title: "Terms and Conditions — MureAI",
+  description: "Terms and conditions for MureAI automation services.",
   robots: {
     index: false,
     follow: false,
@@ -25,9 +25,9 @@ export default function TermsPage() {
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(163,230,53,0.10),transparent_55%)]" />
               <div className="relative space-y-12">
                 <header className="space-y-4">
-                  <h1 className="text-4xl font-bold tracking-tight text-lime-300">Terms and Conditions</h1>
+                  <h1 className="text-4xl font-bold tracking-tight text-brand-lime-300">Terms and Conditions</h1>
                   <p className="text-neutral-400 text-lg">
-                    Welcome to Skitbit. By accessing our website, you agree to these terms and conditions. Please read
+                    Welcome to MureAI. By accessing our website, you agree to these terms and conditions. Please read
                     them carefully.
                   </p>
                 </header>
@@ -35,7 +35,7 @@ export default function TermsPage() {
                 <section className="space-y-3">
                   <h2 className="text-2xl font-semibold text-white">1. Introduction</h2>
                   <p className="text-neutral-300">
-                    These Terms and Conditions govern your use of the Skitbit website and services. By using our
+                    These Terms and Conditions govern your use of the MureAI website and services. By using our
                     website, you accept these Terms in full.
                   </p>
                 </section>
@@ -43,9 +43,9 @@ export default function TermsPage() {
                 <section className="space-y-3">
                   <h2 className="text-2xl font-semibold text-white">2. Intellectual Property Rights</h2>
                   <p className="text-neutral-300">
-                    Unless otherwise stated, Skitbit owns all the project files. This includes all electronic files,
+                    Unless otherwise stated, MureAI owns all the project files. This includes all electronic files,
                     drawings, source files, and any materials provided to the client, which remain the sole property of
-                    Skitbit International, even if shared.
+                    MureAI International, even if shared.
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-neutral-400">
                     <li>You must not republish material from this site.</li>
@@ -70,11 +70,11 @@ export default function TermsPage() {
                     4. Limitation of Liability & Subjectivity of Content
                   </h2>
                   <p className="text-neutral-300">
-                    Skitbit will not be liable for any direct, indirect, or consequential loss or damage arising under
+                    MureAI will not be liable for any direct, indirect, or consequential loss or damage arising under
                     these Terms or in connection with our website or services. The perceived quality, style, or
                     suitability of content created by us remains subjective and cannot be used as grounds to increase
                     scope of work. Revisions are strictly governed by our{" "}
-                    <Link href="/revisions" className="text-lime-300 underline">
+                    <Link href="/revisions" className="text-brand-lime-300 underline">
                       revision policy
                     </Link>
                     .
@@ -94,8 +94,8 @@ export default function TermsPage() {
                   <p className="text-neutral-300">If you have any questions about these Terms, please contact us at:</p>
                   <p className="text-neutral-300">
                     Email:{" "}
-                    <a href="mailto:hello@theskitbit.com" className="text-lime-300 underline">
-                      hello@theskitbit.com
+                    <a href="mailto:hello@mureai.com" className="text-brand-lime-300 underline">
+                      hello@mureai.com
                     </a>
                   </p>
                 </section>

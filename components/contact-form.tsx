@@ -114,8 +114,8 @@ export function ContactForm() {
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="p-2 rounded-lg bg-lime-300/10 border border-lime-300/20">
-                  <Mail className="h-5 w-5 text-lime-300" />
+                <div className="p-2 rounded-lg bg-brand-lime-300/10 border border-brand-lime-300/20">
+                  <Mail className="h-5 w-5 text-brand-lime-300" />
                 </div>
                 <div>
                   <p className="text-sm font-medium text-white">Email</p>
@@ -124,8 +124,8 @@ export function ContactForm() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-2 rounded-lg bg-lime-300/10 border border-lime-300/20">
-                  <Phone className="h-5 w-5 text-lime-300" />
+                <div className="p-2 rounded-lg bg-brand-lime-300/10 border border-brand-lime-300/20">
+                  <Phone className="h-5 w-5 text-brand-lime-300" />
                 </div>
                 <div>
                   <p className="text-sm font-medium text-white">Phone</p>
@@ -134,8 +134,8 @@ export function ContactForm() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-2 rounded-lg bg-lime-300/10 border border-lime-300/20">
-                  <MapPin className="h-5 w-5 text-lime-300" />
+                <div className="p-2 rounded-lg bg-brand-lime-300/10 border border-brand-lime-300/20">
+                  <MapPin className="h-5 w-5 text-brand-lime-300" />
                 </div>
                 <div>
                   <p className="text-sm font-medium text-white">Location</p>
@@ -147,15 +147,15 @@ export function ContactForm() {
                 <h4 className="text-sm font-medium text-white mb-3">Why Choose MureAI?</h4>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <Clock className="h-4 w-4 text-lime-300" />
+                    <Clock className="h-4 w-4 text-brand-lime-300" />
                     <span className="text-xs text-white/70">24-hour response time</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <CheckCircle className="h-4 w-4 text-lime-300" />
+                    <CheckCircle className="h-4 w-4 text-brand-lime-300" />
                     <span className="text-xs text-white/70">Free consultation & audit</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Users className="h-4 w-4 text-lime-300" />
+                    <Users className="h-4 w-4 text-brand-lime-300" />
                     <span className="text-xs text-white/70">Dedicated success manager</span>
                   </div>
                 </div>
@@ -183,7 +183,7 @@ export function ContactForm() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-12"
                 >
-                  <CheckCircle className="h-16 w-16 text-lime-300 mx-auto mb-4" />
+                  <CheckCircle className="h-16 w-16 text-brand-lime-300 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-2">Thank You!</h3>
                   <p className="text-white/70">
                     We'll get back to you within 24 hours with a custom automation strategy.
@@ -202,7 +202,7 @@ export function ContactForm() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="bg-black/20 border-white/10 text-white placeholder:text-white/40 focus:border-lime-300/50 focus:ring-lime-300/20"
+                        className="bg-black/20 border-white/10 text-white placeholder:text-white/40 focus:border-brand-lime-300/50 focus:ring-brand-lime-300/20"
                         placeholder="John Doe"
                       />
                     </div>
@@ -218,7 +218,7 @@ export function ContactForm() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="bg-black/20 border-white/10 text-white placeholder:text-white/40 focus:border-lime-300/50 focus:ring-lime-300/20"
+                        className="bg-black/20 border-white/10 text-white placeholder:text-white/40 focus:border-brand-lime-300/50 focus:ring-brand-lime-300/20"
                         placeholder="john@company.com"
                       />
                     </div>
@@ -234,7 +234,7 @@ export function ContactForm() {
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="bg-black/20 border-white/10 text-white placeholder:text-white/40 focus:border-lime-300/50 focus:ring-lime-300/20"
+                        className="bg-black/20 border-white/10 text-white placeholder:text-white/40 focus:border-brand-lime-300/50 focus:ring-brand-lime-300/20"
                         placeholder="Your Company"
                       />
                     </div>
@@ -249,7 +249,7 @@ export function ContactForm() {
                         type="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="bg-black/20 border-white/10 text-white placeholder:text-white/40 focus:border-lime-300/50 focus:ring-lime-300/20"
+                        className="bg-black/20 border-white/10 text-white placeholder:text-white/40 focus:border-brand-lime-300/50 focus:ring-brand-lime-300/20"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>

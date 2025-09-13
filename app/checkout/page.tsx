@@ -80,7 +80,7 @@ export default function CheckoutPage() {
 
   // Load configuration
   useEffect(() => {
-    const savedContent = localStorage.getItem("skitbit-content")
+    const savedContent = localStorage.getItem("mureai-content")
     if (savedContent) {
       const content = JSON.parse(savedContent)
       if (content.orderForm) {

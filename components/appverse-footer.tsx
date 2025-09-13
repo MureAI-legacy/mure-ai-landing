@@ -15,7 +15,7 @@ interface FooterContent {
 
 const defaultContent: FooterContent = {
   tagline: "Experience 3D animation like never before. We craft cinematic visuals for brands and products.",
-  copyright: "© 2025 — Skitbit International Uk",
+  copyright: "© 2025 — MureAI International Uk",
 }
 
 export function AppverseFooter() {
@@ -23,7 +23,7 @@ export function AppverseFooter() {
 
   useEffect(() => {
     // Load content from localStorage
-    const savedContent = localStorage.getItem("skitbit-content")
+    const savedContent = localStorage.getItem("mureai-content")
     if (savedContent) {
       try {
         const parsed = JSON.parse(savedContent)
@@ -43,7 +43,7 @@ export function AppverseFooter() {
         <div className="flex justify-center">
           <Button
             asChild
-            className="rounded-full bg-lime-400 px-6 py-2 text-sm font-medium text-black shadow-[0_0_20px_rgba(163,230,53,0.35)] hover:bg-lime-300"
+            className="rounded-full bg-brand-lime px-6 py-2 text-sm font-medium text-black shadow-[0_0_20px_rgba(163,230,53,0.35)] hover:bg-brand-lime-300"
           >
             <a href="https://wa.link/rc25na" target="_blank" rel="noopener noreferrer">
               Contact us
@@ -58,7 +58,7 @@ export function AppverseFooter() {
           <div className="relative grid items-center gap-8 md:grid-cols-2">
             {/* Left copy */}
             <div>
-              <p className="mb-2 text-[11px] tracking-widest text-lime-300">STREAMLINE YOUR LAUNCHES</p>
+              <p className="mb-2 text-[11px] tracking-widest text-brand-lime-300">STREAMLINE YOUR LAUNCHES</p>
               <h3 className="text-2xl font-bold leading-tight text-white sm:text-3xl">
                 Preview &amp; approve high-end 3D visuals from anywhere
               </h3>
@@ -80,15 +80,15 @@ export function AppverseFooter() {
                     loop={true}
                     muted={true}
                     playsInline={true}
-                    aria-label="Skitbit app preview - approvals made easy"
+                    aria-label="MureAI app preview - approvals made easy"
                   />
                   {/* On-screen content */}
                   <div className="relative p-3">
                     <div className="mx-auto mb-3 h-1.5 w-16 rounded-full bg-white/20" />
                     <div className="space-y-1 px-1">
-                      <div className="text-5xl font-extrabold text-lime-300">Approvals Made Easy</div>
+                      <div className="text-5xl font-extrabold text-brand-lime-300">Approvals Made Easy</div>
                       <p className="text-xs text-white/80">From feedback to approval in a single flow</p>
-                      <div className="mt-3 inline-flex items-center rounded-full bg-black/40 px-2 py-0.5 text-[10px] uppercase tracking-wider text-lime-300">
+                      <div className="mt-3 inline-flex items-center rounded-full bg-black/40 px-2 py-0.5 text-[10px] uppercase tracking-wider text-brand-lime-300">
                         Zero Hassle
                       </div>
                     </div>
@@ -103,12 +103,12 @@ export function AppverseFooter() {
       {/* Footer */}
       <footer className="border-t border-white/10 pb-20 md:pb-10">
         <div className="container mx-auto px-4 py-10">
-          <div className="grid gap-8 md:grid-cols-[1.2fr_1fr_1fr]">
+          <div className="flex flex-row justify-between">
             {/* Brand */}
             <div className="space-y-3">
               <div className="flex items-center gap-1.5">
-                <Image src="/icons/skitbit-white.svg" alt="Skitbit logo" width={24} height={24} className="h-6 w-6" />
-                <span className="text-xl font-semibold text-lime-300">Skitbit</span>
+                <Image src="/icons/mureai.svg" alt="MureAI logo" width={24} height={24} className="h-6 w-6" />
+                <span className="text-xl font-semibold text-brand-lime-300">MureAI</span>
               </div>
               <p className="max-w-sm text-sm text-neutral-400">{content.tagline}</p>
             </div>
@@ -120,7 +120,7 @@ export function AppverseFooter() {
                 <ul className="space-y-2 text-sm text-neutral-300">
                   {["Home", "Features", "Testimonials", "Pricing", "Blog", "Download"].map((item) => (
                     <li key={item}>
-                      <Link href={`#${item.toLowerCase()}`} className="hover:text-lime-300">
+                      <Link href={`#${item.toLowerCase()}`} className="hover:text-brand-lime-300">
                         {item}
                       </Link>
                     </li>
@@ -133,11 +133,11 @@ export function AppverseFooter() {
                   <li className="flex items-center gap-2">
                     <Twitter className="h-4 w-4 text-neutral-400" />
                     <a
-                      href="https://twitter.com/theskitbit"
+                      href="https://twitter.com/mureai"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-lime-300"
-                      aria-label="Follow skitbit on Twitter"
+                      className="hover:text-brand-lime-300"
+                      aria-label="Follow MureAI on Twitter"
                     >
                       X/Twitter
                     </a>
@@ -145,11 +145,11 @@ export function AppverseFooter() {
                   <li className="flex items-center gap-2">
                     <Youtube className="h-4 w-4 text-neutral-400" />
                     <a
-                      href="https://www.youtube.com/@skitbitinternational"
+                      href="https://www.youtube.com/@mureaiinternational"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-lime-300"
-                      aria-label="Subscribe to skitbit on YouTube"
+                      className="hover:text-brand-lime-300"
+                      aria-label="Subscribe to MureAI on YouTube"
                     >
                       YouTube
                     </a>
@@ -157,11 +157,11 @@ export function AppverseFooter() {
                   <li className="flex items-center gap-2">
                     <Instagram className="h-4 w-4 text-neutral-400" />
                     <a
-                      href="https://instagram.com/theskitbit"
+                      href="https://instagram.com/mureai"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-lime-300"
-                      aria-label="Follow skitbit on Instagram"
+                      className="hover:text-brand-lime-300"
+                      aria-label="Follow MureAI on Instagram"
                     >
                       Instagram
                     </a>
@@ -169,11 +169,11 @@ export function AppverseFooter() {
                   <li className="flex items-center gap-2">
                     <MessageCircle className="h-4 w-4 text-neutral-400" />
                     <a
-                      href="https://threads.com/theskitbit"
+                      href="https://threads.com/mureai"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-lime-300"
-                      aria-label="Follow skitbit on Threads"
+                      className="hover:text-brand-lime-300"
+                      aria-label="Follow MureAI on Threads"
                     >
                       Threads
                     </a>
@@ -187,10 +187,10 @@ export function AppverseFooter() {
           <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-neutral-500 sm:flex-row">
             <p>{content.copyright}</p>
             <div className="flex items-center gap-6">
-              <Link href="/revisions" className="hover:text-lime-300">
-                Revision Policy
+              <Link href="/revisions" className="hover:text-brand-lime-300">
+                Privacy Policy
               </Link>
-              <Link href="/t&c" className="hover:text-lime-300">
+              <Link href="/t&c" className="hover:text-brand-lime-300">
                 Terms & Conditions
               </Link>
             </div>

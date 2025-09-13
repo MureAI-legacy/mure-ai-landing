@@ -21,30 +21,30 @@ export function SiteHeader() {
         <div className="flex h-14 items-center justify-between px-6 liquid-glass-header rounded-full">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-1.5">
-            <Image src="/icons/skitbit-white.svg" alt="Skitbit logo" width={20} height={20} className="h-5 w-5" />
-            <span className="font-semibold tracking-wide text-white">Skitbit</span>
+            <Image src="/icons/mureai.svg" alt="MureAI logo" width={20} height={20} className="h-5 w-5" />
+            <span className="font-semibold tracking-wide text-white">Mure AI</span>
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden items-center gap-6 text-sm text-white md:flex">
             {links.map((l) => (
-              <Link key={l.href} href={l.href} className="hover:text-lime-300 transition-colors font-medium">
+              <Link key={l.href} href={l.href} className="hover:text-purple-300 transition-colors font-medium">
                 {l.label}
               </Link>
             ))}
           </nav>
 
-          {/* Desktop CTA */}
+          {/* Desktop CTA 
           <div className="hidden md:flex">
             <Button
               asChild
-              className="bg-lime-400 text-black font-medium rounded-lg px-6 py-2.5
-                         hover:bg-lime-300 hover:shadow-md hover:scale-[1.02]
+              className="bg-brand-lime text-black font-medium rounded-lg px-6 py-2.5
+                         hover:bg-brand-lime-300 hover:shadow-md hover:scale-[1.02]
                          transition-all"
             >
               <Link href="#contact">Chat With Us</Link>
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile Nav */}
           <div className="md:hidden">
@@ -62,8 +62,8 @@ export function SiteHeader() {
               <SheetContent side="right" className="liquid-glass border-white/20 p-0 w-64 flex flex-col">
                 {/* Brand Header */}
                 <div className="flex items-center gap-1.5 px-4 py-4 border-b border-white/20">
-                  <Image src="/icons/skitbit-white.svg" alt="Skitbit logo" width={24} height={24} className="h-6 w-6" />
-                  <span className="font-semibold tracking-wide text-white text-lg">Skitbit</span>
+                  <Image src="/icons/mureai.svg" alt="MureAI logo" width={24} height={24} className="h-6 w-6" />
+                  <span className="font-semibold tracking-wide text-white text-lg">MureAI</span>
                 </div>
 
                 {/* Nav Links */}
@@ -72,7 +72,7 @@ export function SiteHeader() {
                     <Link
                       key={l.href}
                       href={l.href}
-                      className="flex items-center gap-3 px-4 py-3 hover:bg-white/10 hover:text-lime-300 transition-colors font-medium"
+                      className="flex items-center gap-3 px-4 py-3 hover:bg-white/10 hover:text-brand-lime-300 transition-colors font-medium"
                     >
                       <span className="inline-flex items-center justify-center w-5 h-5 text-white/70">
                         <l.icon className="h-4 w-4" />
@@ -86,8 +86,8 @@ export function SiteHeader() {
                 <div className="mt-auto border-t border-white/20 p-4">
                   <Button
                     asChild
-                    className="w-full bg-lime-400 text-black font-medium rounded-lg px-6 py-2.5
-                               hover:bg-lime-300 hover:shadow-md hover:scale-[1.02]
+                    className="w-full bg-brand-lime text-black font-medium rounded-lg px-6 py-2.5
+                               hover:bg-brand-lime-300 hover:shadow-md hover:scale-[1.02]
                                transition-all"
                   >
                     <Link href="https://wa.link/65mf3i">Get a Quote</Link>

@@ -5,6 +5,7 @@ import type React from "react"
 import { motion } from "framer-motion"
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
+import { PhoneCardsGrid } from "@/components/phone-cards-grid"
 import { Features } from "@/components/features"
 import { AnimatedCards } from "@/components/animated-cards"
 import { Teams } from "@/components/teams"
@@ -100,12 +101,14 @@ export default function Page() {
         <Hero />
 
         <SectionWrapper delay={0.1}>
+          <PhoneCardsGrid />
+        </SectionWrapper>
+
+        <SectionWrapper delay={0.1}>
           <Features />
         </SectionWrapper>
 
-        <SectionWrapper delay={0.2}>
-          <AnimatedCards />
-        </SectionWrapper>
+      
 
         <SectionWrapper delay={0.1}>
           <Teams />

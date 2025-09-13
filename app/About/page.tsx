@@ -5,14 +5,14 @@ export default function AboutPage() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Skitbit International",
-    url: "https://theskitbit.com",
-    logo: "https://theskitbit.com/logo.png",
+    name: "MureAI International",
+    url: "https://mureai.com",
+    logo: "https://mureai.com/logo.png",
     description:
-      "Skitbit International is a 3D product animation agency serving clients in Miami, Los Angeles, New York, Canada, and the UK.",
+      "MureAI International is an AI automation agency serving clients in Miami, Los Angeles, New York, Canada, and the UK.",
     sameAs: [
-      "https://www.instagram.com/skitbit",
-      "https://www.linkedin.com/company/skitbit",
+      "https://www.instagram.com/mureai",
+      "https://www.linkedin.com/company/mureai",
     ],
     address: {
       "@type": "PostalAddress",
@@ -49,7 +49,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative bg-black text-white py-20 px-6 md:px-12 lg:px-20 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          About Skitbit International
+          About MureAI International
         </h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-80">
           Pioneering the future of 3D product animation for global brands.
@@ -102,7 +102,7 @@ export default function AboutPage() {
           Ready to Elevate Your Brand?
         </h2>
         <p className="text-lg opacity-80 mb-8">
-          Let Skitbit International bring your products to life.
+          Let MureAI International automate your business processes.
         </p>
         <a
           href="/contact"

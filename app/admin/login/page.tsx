@@ -26,8 +26,8 @@ export default function AdminLogin() {
     setTimeout(() => {
       // Default credentials
       if (
-        (email === "admin@theskitbit.com" && password === "1234") ||
-        (email === "Addy@theskitbit.com" && password === "1234")
+        (email === "admin@mureai.com" && password === "1234") ||
+        (email === "Addy@mureai.com" && password === "1234")
       ) {
         // Set a cookie that expires in 24 hours
         const expiryDate = new Date()
@@ -50,9 +50,9 @@ export default function AdminLogin() {
             <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
               <span className="text-black font-bold text-lg">SK</span>
             </div>
-            <span className="text-2xl font-semibold text-white">Skitbit</span>
+            <span className="text-2xl font-semibold text-white">MureAI</span>
           </div>
-          <h1 className="text-4xl font-bold text-white mt-12">Welcome to Skitbit Admin</h1>
+          <h1 className="text-4xl font-bold text-white mt-12">Welcome to MureAI Admin</h1>
           <p className="text-purple-100 mt-4 max-w-md">
             Manage your website content, pricing, and settings from one central dashboard.
           </p>
@@ -75,7 +75,7 @@ export default function AdminLogin() {
           <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
             <span className="text-black font-bold text-lg">SK</span>
           </div>
-          <span className="text-2xl font-semibold text-white">Skitbit</span>
+          <span className="text-2xl font-semibold text-white">MureAI</span>
         </div>
 
         <div className="w-full max-w-md">
@@ -101,7 +101,7 @@ export default function AdminLogin() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@theskitbit.com"
+                placeholder="admin@mureai.com"
                 className="bg-[#1a1a1a] border-neutral-800 text-white"
                 required
               />
@@ -142,8 +142,8 @@ export default function AdminLogin() {
           <div className="mt-8 text-center">
             <p className="text-neutral-400 text-sm">
               Need help? Contact{" "}
-              <a href="mailto:support@theskitbit.com" className="text-[#C6FF3A] hover:underline">
-                support@theskitbit.com
+              <a href="mailto:support@mureai.com" className="text-[#C6FF3A] hover:underline">
+                support@mureai.com
               </a>
             </p>
           </div>

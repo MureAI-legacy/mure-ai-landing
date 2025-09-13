@@ -3,7 +3,7 @@ import type { Config } from "tailwindcss";
 // all in fixtures is set to tailwind v3 as interims solutions
 
 const config: Config = {
-    darkMode: ["class"],
+    darkMode: "class",
     content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,6 +13,13 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
+  			// Brand colors
+  			brand: {
+  				'lime': 'var(--brand-lime)',
+  				'lime-300': 'var(--brand-lime-300)',
+  				'lime-muted': 'var(--brand-lime-muted)',
+  				'lime-subtle': 'var(--brand-lime-subtle)',
+  			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
