@@ -7,7 +7,10 @@ import { motion } from "framer-motion"
 
 export function Hero() {
   const buttonNew = (
-    <Button asChild className="rounded-full bg-lime-400 px-6 text-black hover:bg-lime-300">
+    <Button
+      asChild
+      className="rounded-full bg-lime-400 px-6 text-black hover:bg-lime-300 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+    >
       <a href="https://wa.link/rc25na" target="_blank" rel="noopener noreferrer">
         Free Consultation
       </a>
@@ -15,7 +18,7 @@ export function Hero() {
   )
 
   return (
-    <section className="relative isolate overflow-hidden">
+    <section className="relative isolate overflow-hidden pt-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center py-14 sm:py-20">
           <div className="mb-5 flex items-center gap-2">
@@ -33,9 +36,9 @@ export function Hero() {
           </p>
           <div className="mt-6">{buttonNew}</div>
 
-          <div className="mt-10 grid w-full gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
+          <div className="mt-10 grid w-full gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {phoneData.map((p, i) => {
-              const visibility = i <= 2 ? "block" : i === 3 ? "hidden md:block" : i === 4 ? "hidden xl:block" : "hidden"
+              const visibility = i <= 2 ? "block" : i === 3 ? "hidden md:block" : "hidden"
 
               return (
                 <motion.div
@@ -133,11 +136,5 @@ const phoneData = [
     sub: "AI advantage with zero technical skills.",
     tone: "accessible",
     gradient: "from-[#0b0b0b] via-[#1f2937] to-[#0b1220]",
-  },
-  {
-    title: "Enterprise",
-    sub: "GDPR-compliant and secure.",
-    tone: "enterprise",
-    gradient: "from-[#0b0b0b] via-[#111827] to-[#052e16]",
   },
 ]

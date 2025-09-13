@@ -106,6 +106,53 @@ const services = [
   },
 ]
 
+const ServicePhoneCard = ({ service }: { service: (typeof services)[0] }) => {
+  return (
+    <div className="relative rounded-[28px] glass-border bg-neutral-900 p-2 hover:shadow-[0_0_30px_rgba(132,204,22,0.15)] transition-shadow duration-300">
+      <div className="relative aspect-[9/16] w-full overflow-hidden rounded-2xl bg-black">
+        {/* Background gradient */}
+        <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-60`} />
+
+        {/* Animated background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(132,204,22,0.1)_0%,transparent_50%)] animate-pulse" />
+        </div>
+
+        <div className="relative z-10 p-4 h-full flex flex-col">
+          {/* Top indicator bar */}
+          <div className="mx-auto mb-4 h-1.5 w-16 rounded-full bg-white/20" />
+
+          {/* Icon and title */}
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-2 rounded-xl bg-black/40 border border-white/20">
+              {React.createElement(service.icon, { className: `h-5 w-5 ${service.iconColor}` })}
+            </div>
+            <div className="text-lg font-bold text-white/90 leading-tight">{service.title}</div>
+          </div>
+
+          {/* Description */}
+          <p className="text-xs text-white/70 mb-4 leading-relaxed flex-1">{service.description}</p>
+
+          {/* Features */}
+          <div className="space-y-2">
+            {service.features.slice(0, 2).map((feature, i) => (
+              <div key={i} className="flex items-start gap-2">
+                <div className="w-1 h-1 rounded-full bg-lime-300 mt-1.5 flex-shrink-0"></div>
+                <span className="text-[10px] text-white/60 leading-tight">{feature}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom badge */}
+          <div className="mt-4 inline-flex items-center rounded-full bg-black/40 px-2 py-1 text-[9px] uppercase tracking-wider text-lime-300 self-start">
+            mureai service
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export function Features() {
   const [content, setContent] = useState<FeaturesContent>(defaultContent)
 
@@ -259,50 +306,41 @@ export function Features() {
 
       <div className="mb-16">
         <h3 className="mb-12 text-center text-2xl font-bold text-white">Our Services</h3>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
+
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {services.slice(0, 4).map((service, index) => (
             <motion.div
               key={index}
               whileHover={{
-                scale: 1.03,
+                scale: 1.02,
                 y: -8,
                 transition: { type: "spring", stiffness: 400, damping: 25 },
               }}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <Card className="liquid-glass border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-lime-300/20 hover:shadow-[0_0_40px_rgba(132,204,22,0.15)] transition-all duration-300 relative overflow-hidden h-full group">
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
-                />
+              <ServicePhoneCard service={service} />
+            </motion.div>
+          ))}
+        </div>
 
-                <CardHeader className="relative z-10">
-                  <div className="flex items-center gap-4 mb-2">
-                    <div className="p-3 rounded-xl bg-black/20 border border-white/10 group-hover:border-lime-300/30 transition-colors duration-300">
-                      {React.createElement(service.icon, { className: `h-6 w-6 ${service.iconColor}` })}
-                    </div>
-                    <CardTitle className="text-lg text-white group-hover:text-lime-100 transition-colors duration-300">
-                      {service.title}
-                    </CardTitle>
-                  </div>
-                </CardHeader>
-
-                <CardContent className="relative z-10">
-                  <p className="text-sm text-white/70 mb-4 leading-relaxed group-hover:text-white/80 transition-colors duration-300">
-                    {service.description}
-                  </p>
-                  <ul className="text-xs text-white/60 space-y-2 group-hover:text-white/70 transition-colors duration-300">
-                    {service.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <div className="w-1 h-1 rounded-full bg-lime-300 mt-2 flex-shrink-0"></div>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-6 max-w-2xl mx-auto">
+          {services.slice(4, 6).map((service, index) => (
+            <motion.div
+              key={index + 4}
+              whileHover={{
+                scale: 1.02,
+                y: -8,
+                transition: { type: "spring", stiffness: 400, damping: 25 },
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: (index + 4) * 0.1, duration: 0.6 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <ServicePhoneCard service={service} />
             </motion.div>
           ))}
         </div>
