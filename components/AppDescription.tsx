@@ -13,7 +13,7 @@ export function AppDescription() {
       asChild
       className="group relative overflow-hidden rounded-full bg-brand-lime px-6 text-black font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-brand-lime-300/25 active:scale-95"
     >
-      <a href="https://wa.link/rc25na" target="_blank" rel="noopener noreferrer" className="relative z-10">
+      <a href="#404" target="_blank" rel="noopener noreferrer" className="relative z-10">
         <span className="relative z-10 transition-colors duration-300 group-hover:text-lime-300">
           Try Now
         </span>
@@ -47,7 +47,7 @@ export function AppDescription() {
             <div className="mt-8 pt-6 border-t border-white/10">
               <p className="mb-2 text-[11px] tracking-widest text-brand-lime-300">AUTOMATE INSTANTLY</p>
               <h3 className="text-2xl font-bold leading-tight text-white sm:text-3xl">
-                Preview &amp; and approve your custom workflows on the spot
+                Build your custom workflows on the spot
               </h3>
               <p className="mt-2 max-w-prose text-sm text-neutral-400">
               Describe your process, and let AI generate ready-to-run workflows.
@@ -99,7 +99,7 @@ export function AppDescription() {
                   {/* Click indicator overlay */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-brand-lime-300/90 rounded-full p-3 backdrop-blur-sm">
-                      <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 text-black" fill="none" stroke="white" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     </div>

@@ -264,7 +264,7 @@ export function ContactForm() {
                           variant={formData.projectType === type ? "default" : "secondary"}
                           className={`cursor-pointer transition-all duration-200 ${
                             formData.projectType === type
-                              ? "bg-lime-300 text-black hover:bg-lime-400"
+                              ? "bg-lime-300 text-black hover:bg-lime-300"
                               : "bg-black/20 text-white/70 border border-white/10 hover:bg-white/10 hover:text-white"
                           }`}
                           onClick={() => handleProjectTypeSelect(type)}
@@ -294,20 +294,26 @@ export function ContactForm() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-lime-400 text-black hover:bg-lime-300 disabled:opacity-50 disabled:cursor-not-allowed font-medium py-3"
+                    className="w-full bg-lime-300 text-black  disabled:opacity-50 disabled:cursor-not-allowed font-medium py-3 cursor-pointer group relative overflow-hidden rounded-full shadow-lg transition-all duration-300 hover:shadow-2xl hover:shadow-brand-lime-300/25"
                   >
                     {isSubmitting ? (
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 relative z-10 transition-all duration-300 group-hover:text-lime-300  group-hover:drop-shadow-[0_0_8px_rgba(132,204,22,0.6)]">
                         <div className="w-4 h-4 border-2 border-black/20 border-t-black rounded-full animate-spin" />
                         Sending...
                       </div>
                     ) : (
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 relative z-10 transition-all duration-300 group-hover:text-lime-300 group-hover:drop-shadow-[0_0_8px_rgba(132,204,22,0.6)]">
                         <Send className="h-4 w-4" />
                         Get Free Consultation
                       </div>
                     )}
+                    {/* Animated background gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-brand-lime-300 via-brand-lime-400 to-brand-lime-300 opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-0"></div>
+                    {/* Shimmer effect */}
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full z-10"></div>
                   </Button>
+
+                 
 
                   <p className="text-xs text-white/50 text-center">
                     By submitting this form, you agree to our privacy policy and terms of service.

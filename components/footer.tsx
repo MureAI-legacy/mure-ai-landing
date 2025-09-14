@@ -11,7 +11,7 @@ interface FooterContent {
 }
 
 const defaultContent: FooterContent = {
-  tagline: "Experience 3D animation like never before. We craft cinematic visuals for brands and products.",
+  tagline: "Enterprise AI automation platform for modern businesses. Experience the future of work today.",
   copyright: "© 2025 — MureAI",
 }
 
@@ -53,13 +53,13 @@ export function AppverseFooter() {
             </div>
 
             {/* Navigation */}
-            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-2">
+            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-2 ">
               <div>
                 <h5 className="mb-2 text-xs font-semibold uppercase tracking-widest text-neutral-400">Navigation</h5>
                 <ul className="space-y-2 text-sm text-neutral-300">
-                  {["Home", "Features", "Testimonials", "Pricing", "Blog", "Download"].map((item) => (
+                  {["Home", "Features", "Testimonials", "Pricing", "Blog", ].map((item) => (
                     <li key={item}>
-                      <Link href={`#${item.toLowerCase()}`} className="hover:text-brand-lime-300">
+                      <Link href={`#${item.toLowerCase()}`} className="hover:text-white hover:scale-110 transition-all duration-300">
                         {item}
                       </Link>
                     </li>
@@ -75,7 +75,7 @@ export function AppverseFooter() {
                       href="https://twitter.com/mureai"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-brand-lime-300"
+                      className="hover:text-white transition-all duration-300"
                       aria-label="Follow MureAI on Twitter"
                     >
                       X/Twitter
@@ -87,7 +87,7 @@ export function AppverseFooter() {
                       href="https://www.youtube.com/@mureaiinternational"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-brand-lime-300"
+                      className="hover:text-white  transition-all duration-300"
                       aria-label="Subscribe to MureAI on YouTube"
                     >
                       YouTube
@@ -99,7 +99,7 @@ export function AppverseFooter() {
                       href="https://instagram.com/mureai"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-brand-lime-300"
+                      className="hover:text-white  transition-all duration-300"
                       aria-label="Follow MureAI on Instagram"
                     >
                       Instagram
@@ -111,7 +111,7 @@ export function AppverseFooter() {
                       href="https://threads.com/mureai"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-brand-lime-300"
+                      className="hover:text-white  transition-all duration-300"
                       aria-label="Follow MureAI on Threads"
                     >
                       Threads
@@ -126,10 +126,10 @@ export function AppverseFooter() {
           <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-neutral-500 sm:flex-row">
             <p>{content.copyright}</p>
             <div className="flex items-center gap-6">
-              <Link href="/revisions" className="hover:text-brand-lime-300">
+              <Link href="/revisions" className="hover:text-white hover:scale-105 duration-300">
                 Privacy Policy
               </Link>
-              <Link href="/t&c" className="hover:text-brand-lime-300">
+              <Link href="/t&c" className="hover:text-white hover:scale-105 duration-300">
                 Terms & Conditions
               </Link>
             </div>

@@ -7,9 +7,9 @@ export function Hero() {
   const buttonNew = (
     <Button
       asChild
-      className=" bg-purple-300 group relative overflow-hidden rounded-full bg-brand-lime px-6 text-black font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-brand-lime-300/25 active:scale-95"
+      className=" bg-purple-300 group relative overflow-hidden rounded-full bg-brand-lime px-6 text-black font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-brand-lime-300/25 active:scale-95 w-36"
     >
-      <a href="https://wa.link/rc25na" target="_blank" rel="noopener noreferrer" className="relative z-10">
+      <a href="#contact"  className="relative z-10">
         <span className="relative z-10 transition-colors duration-300 group-hover:text-lime-300">
           Free Consultation
         </span>
@@ -19,13 +19,28 @@ export function Hero() {
         <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent  via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full z-10"></div>
       </a>
     </Button>
+  )
 
-    
+  const buttonMore = (
+    <Button
+      asChild
+      className=" bg-purple-300 group relative overflow-hidden border border-brand-lime text-white rounded-full bg-transparent px-6  font-semibold shadow-lg transition-all duration-300 hover:scale-105 group-hover:border-0 hover:shadow-2xl hover:shadow-brand-lime-300/25 active:scale-95 w-36"
+    >
+      <a href="#about"  className="relative z-10">
+        <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+          Learn More
+        </span>
+        {/* Animated background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-lime-300 via-brand-lime-400 to-brand-lime-300 opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-0"></div>
+        {/* Shimmer effect */}
+        <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent  via-white/20 to-transparent transition-transform duration-700  group-hover:translate-x-full z-10"></div>
+      </a>
+    </Button>
   )
   
 
   return (
-    <section className="relative isolate overflow-hidden pt-20 min-h-screen">
+    <section className="relative isolate overflow-hidden pt-30 min-h-screen">
       <div className="container mx-auto px-4 h-full">
         <div className="flex flex-col items-center justify-center h-full py-14 sm:py-20">
           <div className="mb-5 flex items-center gap-2">
@@ -40,7 +55,17 @@ export function Hero() {
           <p className="mt-4 text-center text-lg text-white/70 max-w-2xl">
             Our AI automation saves time and cuts manual overhead so you can focus on <span className="text-purple-300">growth.</span>
           </p>
-          <div className="mt-6">{buttonNew}</div>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 items-center justify-center">
+            <div>{buttonNew}</div>
+            <div>{buttonMore}</div>
+            
+          </div>
+        </div>
+
+        <div className="absolute bottom-56 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <svg className="w-5 h-4 text-purple-200 opacity-60 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </div>
     </section>

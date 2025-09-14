@@ -8,50 +8,60 @@ import Image from "next/image"
 
 const teamMembers = [
   {
-    name: "Alex Chen",
-    role: "AI Strategy Director",
-    bio: "Former Google AI researcher with 8+ years building enterprise automation solutions.",
-    image: "/professional-headshot-of-ai-director.jpg",
-    skills: ["Machine Learning", "Enterprise AI", "Strategy"],
+    name: "Ahmed Shaban",
+    role: "CEO, Business Strategist",
+    bio: "Co-founder of 2 startups with years of business experience.",
+    image: "/ahmed.webp",
+    skills: ["Machine Learning", "Business Strategy"],
     social: {
       linkedin: "#",
-      twitter: "#",
+     
+    },
+  },
+  {
+    name: "Duc Lee",
+    role: "CTO, Full-stack Developer",
+    bio: "Full-stack developer specializing in gen AI software and SaaS products.",
+    image: "/duc.webp",
+    skills: ["Fullstack Engineer", "AI Development", "Langflow", "Workflow Design"],
+    social: {
+      linkedin: "#",
+      
       github: "#",
     },
   },
   {
-    name: "Sarah Rodriguez",
-    role: "Automation Engineer",
-    bio: "Full-stack developer specializing in workflow automation and system integrations.",
-    image: "/female-engineer-headshot.png",
-    skills: ["Python", "API Integration", "Workflow Design"],
+    name: "Yunwei Cui",
+    role: "Marketing & Sales",
+    bio: "Sales and branding strategist with an emphasis on delivering valuable products.",
+    image: "/yun.webp",
+    skills: ["Branding", "UI/UX", "Marketing & Sales"],
     social: {
       linkedin: "#",
-      twitter: "#",
+     
       github: "#",
     },
   },
   {
-    name: "Marcus Thompson",
-    role: "AI Voice Specialist",
-    bio: "Voice technology expert with background in natural language processing and conversational AI.",
-    image: "/professional-headshot-of-ai-voice-specialist.jpg",
-    skills: ["NLP", "Voice AI", "Conversational Design"],
+    name: "Udayanto Atmojo",
+    role: "Project Manager",
+    bio: "PhD in automation and applied AI. Project manager and market research expert.",
+    image: "/atmojo.webp",
+    skills: ["Project Management", "Market Research", "AI Implementation"],
     social: {
       linkedin: "#",
-      twitter: "#",
-      github: "#",
+      
     },
   },
   {
-    name: "Elena Vasquez",
-    role: "Client Success Manager",
-    bio: "Business strategist focused on AI adoption and digital transformation for enterprise clients.",
-    image: "/business-strategist-headshot.png",
-    skills: ["Business Strategy", "Client Relations", "AI Implementation"],
+    name: "Andre Santacruz",
+    role: "Automation Expert",
+    bio: "AI workflow engineer with a background in finance.",
+    image: "/andre.webp",
+    skills: ["AI Workflows", "Automation Engineer", "Finance"],
     social: {
       linkedin: "#",
-      twitter: "#",
+    
     },
   },
 ]
@@ -67,7 +77,7 @@ export function Teams() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          Meet Our AI Experts
+          Meet Our Team
         </motion.h2>
         <motion.p
           className="text-lg text-white/70 max-w-2xl mx-auto"
@@ -81,7 +91,7 @@ export function Teams() {
         </motion.p>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-5">
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}
@@ -95,12 +105,12 @@ export function Teams() {
             transition={{ delay: index * 0.1, duration: 0.6 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <Card className="liquid-glass border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-brand-lime-300/20 hover:shadow-[0_0_30px_rgba(132,204,22,0.1)] transition-all duration-300 relative overflow-hidden h-full">
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-lime-300/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+            <Card className="liquid-glass border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-brand-lime/20 hover:shadow-[0_0_30px_rgba(132,204,22,0.1)] transition-all duration-300 relative overflow-hidden h-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-lime/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
 
-              <CardContent className="p-6 relative z-10">
+              <CardContent className="p-6 relative z-10 h-full">
                 <div className="relative mb-4">
-                  <div className="relative aspect-square overflow-hidden rounded-xl border border-white/10 hover:border-brand-lime-300/30 transition-colors duration-300">
+                  <div className="relative aspect-square overflow-hidden rounded-xl border border-white/10 hover:border-brand-lime/30 transition-colors duration-300">
                     <Image
                       src={member.image || "/placeholder.svg"}
                       alt={`${member.name} - ${member.role}`}
@@ -114,7 +124,7 @@ export function Teams() {
                   </div>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-3 flex flex-col">
                   <div>
                     <h3 className="text-lg font-bold text-white">{member.name}</h3>
                     <p className="text-sm text-brand-lime-300 font-medium">{member.role}</p>
@@ -134,11 +144,11 @@ export function Teams() {
                     ))}
                   </div>
 
-                  <div className="flex gap-3 pt-2">
+                  <div className="flex gap-3 pt-6 absolute bottom-0 left-6 z-20">
                     {member.social.linkedin && (
-                      <a
+                      <a 
                         href={member.social.linkedin}
-                        className="text-white/40 hover:text-brand-lime-300 transition-colors duration-200"
+                        className="text-white/40 hover:!text-white transition-colors duration-200"
                         aria-label={`${member.name} LinkedIn`}
                       >
                         <Linkedin className="h-4 w-4" />
@@ -147,7 +157,7 @@ export function Teams() {
                     {member.social.twitter && (
                       <a
                         href={member.social.twitter}
-                        className="text-white/40 hover:text-brand-lime-300 transition-colors duration-200"
+                        className="text-white/40 hover:!text-white transition-colors duration-200"
                         aria-label={`${member.name} Twitter`}
                       >
                         <Twitter className="h-4 w-4" />
@@ -156,7 +166,7 @@ export function Teams() {
                     {member.social.github && (
                       <a
                         href={member.social.github}
-                        className="text-white/40 hover:text-brand-lime-300 transition-colors duration-200"
+                        className="text-white/40 hover:!text-white transition-colors duration-200"
                         aria-label={`${member.name} GitHub`}
                       >
                         <Github className="h-4 w-4" />

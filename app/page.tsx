@@ -15,6 +15,7 @@ import { LogoMarquee } from "@/components/logo-marquee"
 import { Pricing } from "@/components/pricing"
 import { ContactForm } from "@/components/contact-form"
 import { AppverseFooter } from "@/components/footer"
+import { BlogPost } from "@/components/blog-post"
 import Script from "next/script"
 
 const SectionWrapper = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
@@ -116,11 +117,11 @@ export default function Page() {
           </section>
         </SectionWrapper>
 
-        <SectionWrapper delay={0.1}>
+        {/* <SectionWrapper delay={0.1}>
           <section id="workflow">
             <PhoneCardsGrid />
           </section>
-        </SectionWrapper>
+        </SectionWrapper> */}
 
         <SectionWrapper delay={0.1}>
           <section id="process">
@@ -128,9 +129,11 @@ export default function Page() {
           </section>
         </SectionWrapper>
 
-        
-
-       
+        <SectionWrapper delay={0.1}>
+          <section id="blog">
+            <BlogPost />
+          </section>
+        </SectionWrapper>
 
         <SectionWrapper delay={0.1}>
           <section id="team">
@@ -138,21 +141,21 @@ export default function Page() {
           </section>
         </SectionWrapper>
 
-        <SectionWrapper delay={0.2}>
+        {/*<SectionWrapper delay={0.2}>
           <LogoMarquee />
-        </SectionWrapper>
+        </SectionWrapper> */}
 
-        <SectionWrapper delay={0.1}>
+        {/* <SectionWrapper delay={0.1}>
           <section id="pricing">
             <Pricing />
           </section>
-        </SectionWrapper>
+        </SectionWrapper> */}
 
         <SectionWrapper delay={0.2}>
           <section id="contact">
             <ContactForm />
           </section>
-        </SectionWrapper>
+        </SectionWrapper> 
 
         <SectionWrapper delay={0.1}>
           <AppverseFooter />

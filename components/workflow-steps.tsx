@@ -44,7 +44,7 @@ export function WorkflowSteps() {
               <div key={index} className="flex items-center">
                 <motion.div
                   whileHover={{
-                    scale: 1.05,
+                    scale: 1.02,
                     y: -8,
                     transition: { type: "spring", stiffness: 400, damping: 25 },
                   }}
@@ -55,16 +55,16 @@ export function WorkflowSteps() {
                   className="relative"
                 >
                   <Card
-                    className={`w-80 liquid-glass border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-brand-lime-300/20 hover:shadow-[0_0_40px_rgba(132,204,22,0.15)] transition-all duration-300 relative overflow-hidden`}
+                    className={`w-80 liquid-glass border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-brand-lime/20 hover:shadow-[0_0_40px_rgba(132,204,22,0.15)] transition-all duration-300 relative overflow-hidden cursor-pointer:none group`}
                   >
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 hover:opacity-100 transition-opacity duration-300`}
+                      className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                     />
 
                     <CardHeader className="relative z-10 text-center pb-4">
                       <div className="flex flex-col items-center gap-3">
                         <div className="relative">
-                          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-lime-300 text-black font-bold text-2xl shadow-lg">
+                          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-lime text-black font-bold text-2xl shadow-lg">
                             {String(index + 1).padStart(2, "0")}
                           </div>
                           <div className="absolute -top-1 -right-1 text-2xl">{step.icon}</div>
@@ -117,10 +117,10 @@ export function WorkflowSteps() {
                   viewport={{ once: true, margin: "-100px" }}
                 >
                   <Card
-                    className={`w-full max-w-md liquid-glass border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-brand-lime-300/20 hover:shadow-[0_0_30px_rgba(132,204,22,0.1)] transition-all duration-300 relative overflow-hidden`}
+                    className={`w-full max-w-md liquid-glass border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-brand-lime-300/20 hover:shadow-[0_0_30px_rgba(132,204,22,0.1)] transition-all duration-300 relative overflow-hidden cursor-pointer group`}
                   >
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 hover:opacity-100 transition-opacity duration-300`}
+                      className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                     />
 
                     <CardHeader className="relative z-10">

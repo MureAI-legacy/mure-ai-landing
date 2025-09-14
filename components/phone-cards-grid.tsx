@@ -82,8 +82,15 @@ const phoneData = [
 
 export function PhoneCardsGrid() {
   return (
-    <section className=" container mx-auto px-4 py-16 sm:py-20">
-      <div className="grid gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    
+     
+
+    <section className="container mx-auto px-4 py-16 sm:py-20">
+       <h2 className="mb-12 text-center text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+        Explore Our Services
+      </h2>
+
+      <div className="  grid gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {phoneData.map((p, i) => {
           const visibility = i <= 2 ? "block" : i === 3 ? "hidden md:block" : "hidden"
 
