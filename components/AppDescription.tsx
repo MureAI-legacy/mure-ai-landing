@@ -26,7 +26,7 @@ export function AppDescription() {
   )
 
   return (
-    <section className="container mx-auto px-4 py-16 sm:py-20 min-h-screen">
+    <section className="container mx-auto px-4 py-16 sm:py-20">
       <Card className="relative overflow-hidden rounded-3xl liquid-glass p-6 sm:p-10">
         <div className="relative grid items-center gap-12 lg:gap-16 lg:grid-cols-2 text-center lg:text-left">
           {/* Left copy */}
@@ -38,27 +38,27 @@ export function AppDescription() {
               <span className="block text-white">PLATFORM</span>
             </h1>
             <p className="mt-4 text-lg text-white/70 max-w-2xl">
-              Our AI automation streamlines workflows and cuts manual overhead so you can focus on growth, with
-              enterprise-grade reliability.
+              Our intelligent platform builds workflows for you with no manual setup required. 
+              Scale faster with AI-driven reliability and enterprise-grade flexibility.
             </p>
             <div className="mt-6"></div>
             </div>
             
             <div className="mt-8 pt-6 border-t border-white/10">
-              <p className="mb-2 text-[11px] tracking-widest text-brand-lime-300">STREAMLINE YOUR LAUNCHES</p>
+              <p className="mb-2 text-[11px] tracking-widest text-brand-lime-300">AUTOMATE INSTANTLY</p>
               <h3 className="text-2xl font-bold leading-tight text-white sm:text-3xl">
-                Preview &amp; approve high-end 3D visuals from anywhere
+                Preview &amp; and approve your custom workflows on the spot
               </h3>
               <p className="mt-2 max-w-prose text-sm text-neutral-400">
-                Review renders, leave timestamped comments, and approve scenes from anywhere. Using our revision &amp;
-                collaboration tools
+              Describe your process, and let AI generate ready-to-run workflows.
+              Skip the drag-and-drop hassle
               </p>
             </div>
             <div className="mt-6 ">{buttonTry}</div>
           </div>
 
           {/* Right mockup */}
-          <div className="mx-auto w-full max-w-[320px] relative">
+          <div className=" mx-auto w-full max-w-[320px] relative">
             <a 
               href="https://wa.link/rc25na" 
               target="_blank" 
@@ -69,7 +69,7 @@ export function AppDescription() {
               <div className="absolute -inset-4 rounded-[40px] bg-gradient-to-r from-brand-lime-300/10 via-brand-lime-400/15 to-brand-lime-500/10 opacity-0 group-hover:opacity-100 blur-2xl transition-all duration-700 scale-110 pointer-events-none"></div>
               <div className="absolute -inset-6 rounded-[50px] bg-gradient-to-br from-brand-lime-200/5 via-transparent to-brand-lime-600/5 opacity-0 group-hover:opacity-100 blur-3xl transition-all duration-1000 scale-125 pointer-events-none"></div>
               
-              <div className="relative rounded-[28px] liquid-glass p-2 shadow-2xl group-hover:shadow-[0_25px_50px_-12px_rgba(132,204,22,0.25)] transition-all duration-500">
+              <div className="relative rounded-[28px] glass-border liquid-glass p-2 shadow-2xl group-hover:shadow-[0_25px_50px_-12px_rgba(132,204,22,0.25)] transition-all duration-500">
                 {/* Inner glow effect on hover */}
                 <div className="absolute -inset-1 rounded-[30px] bg-gradient-to-r from-brand-lime-300/20 to-brand-lime-500/20 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
                 

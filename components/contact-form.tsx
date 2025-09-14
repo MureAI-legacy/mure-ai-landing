@@ -119,7 +119,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-white">Email</p>
-                  <p className="text-sm text-white/70">hello@mureai.com</p>
+                  <p className="text-sm text-white/70">developer@mureai.com</p>
                 </div>
               </div>
 
@@ -129,7 +129,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-white">Phone</p>
-                  <p className="text-sm text-white/70">+1 (555) 123-4567</p>
+                  <p className="text-sm text-white/70">+358 44123-4567</p>
                 </div>
               </div>
 
@@ -139,7 +139,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-white">Location</p>
-                  <p className="text-sm text-white/70">San Francisco, CA</p>
+                  <p className="text-sm text-white/70">Espoo, Helsinki</p>
                 </div>
               </div>
 
@@ -203,7 +203,7 @@ export function ContactForm() {
                         onChange={handleInputChange}
                         required
                         className="bg-black/20 border-white/10 text-white placeholder:text-white/40 focus:border-brand-lime-300/50 focus:ring-brand-lime-300/20"
-                        placeholder="John Doe"
+                        placeholder="Enter your name"
                       />
                     </div>
 
@@ -219,7 +219,7 @@ export function ContactForm() {
                         onChange={handleInputChange}
                         required
                         className="bg-black/20 border-white/10 text-white placeholder:text-white/40 focus:border-brand-lime-300/50 focus:ring-brand-lime-300/20"
-                        placeholder="john@company.com"
+                        placeholder="your@company.com"
                       />
                     </div>
                   </div>
