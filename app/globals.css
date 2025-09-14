@@ -5,10 +5,14 @@
 
 :root {
   /* Brand Colors */
-  --brand-lime: #fcd34d;
-  --brand-lime-300: #fcd34d;
-  --brand-lime-muted: rgba(245, 158, 11, 0.8);
-  --brand-lime-subtle: rgba(245, 158, 11, 0.3);
+  --brand-lime: #a78bfa;          /* Base purple */
+      /* Lighter purple for accents */
+  --brand-lime-muted: rgba(167, 139, 250, 0.8);  /* Muted/translucent purple */
+  --brand-lime-subtle: rgba(167, 139, 250, 0.3);
+
+
+  --brand-lime-300: #b7f26d;
+  
   
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -123,6 +127,9 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;

@@ -561,8 +561,8 @@ export default function AdminDashboard() {
                   <Sparkles className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold">Content Management Active</h3>
-                  <p className="text-purple-100">Your website content is live and ready for updates.</p>
+                  <h3 className="text-xl font-semibold">You're a good hacker, welcome. This is still work in progress</h3>
+                  <p className="text-purple-100">Send us an email at developer@mureai.com and we will hire you maybe</p>
                 </div>
               </div>
               <Button onClick={handlePreview} className="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-6">

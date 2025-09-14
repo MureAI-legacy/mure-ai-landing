@@ -58,7 +58,7 @@ const teamMembers = [
 
 export function Teams() {
   return (
-    <section className="container mx-auto px-4 py-16 sm:py-20">
+    <section className="container mx-auto px-4 py-16 sm:py-20 ">
       <div className="text-center mb-12">
         <motion.h2
           className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl mb-4"
@@ -177,12 +177,12 @@ export function Teams() {
         transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: true, margin: "-100px" }}
       >
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/20 border border-brand-lime-300/20">
-          <div className="w-2 h-2 bg-brand-lime-300 rounded-full animate-pulse"></div>
+         {/*<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/20 border border-brand-lime-300/20">
+         <div className="w-2 h-2 bg-brand-lime-300 rounded-full animate-pulse"></div>
           <p className="text-sm text-white/70">
             <span className="text-brand-lime-300 font-medium">15+ years</span> combined AI & automation experience
-          </p>
-        </div>
+          </p> 
+        </div>*/}
       </motion.div>
     </section>
   )

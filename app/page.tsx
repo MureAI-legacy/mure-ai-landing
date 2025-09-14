@@ -3,16 +3,18 @@
 import type React from "react"
 
 import { motion } from "framer-motion"
-import { SiteHeader } from "@/components/site-header"
+import { SiteHeader } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { PhoneCardsGrid } from "@/components/phone-cards-grid"
+import { WorkflowSteps } from "@/components/workflow-steps"
 import { Features } from "@/components/features"
+import { AppDescription } from "@/components/AppDescription"
 import { AnimatedCards } from "@/components/animated-cards"
 import { Teams } from "@/components/teams"
 import { LogoMarquee } from "@/components/logo-marquee"
 import { Pricing } from "@/components/pricing"
 import { ContactForm } from "@/components/contact-form"
-import { AppverseFooter } from "@/components/appverse-footer"
+import { AppverseFooter } from "@/components/footer"
 import Script from "next/script"
 
 const SectionWrapper = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
@@ -98,20 +100,42 @@ export default function Page() {
       <main className="min-h-[100dvh] text-white">
         <SiteHeader />
 
-        <Hero />
+        <section id="home">
+          <Hero /> 
+        </section>
 
         <SectionWrapper delay={0.1}>
-          <PhoneCardsGrid />
+          <section id="about">
+            <AppDescription />
+          </section>
         </SectionWrapper>
 
         <SectionWrapper delay={0.1}>
-          <Features />
+          <section id="services">
+            <Features />
+          </section>
         </SectionWrapper>
 
-      
+        <SectionWrapper delay={0.1}>
+          <section id="workflow">
+            <PhoneCardsGrid />
+          </section>
+        </SectionWrapper>
 
         <SectionWrapper delay={0.1}>
-          <Teams />
+          <section id="process">
+            <WorkflowSteps />
+          </section>
+        </SectionWrapper>
+
+        
+
+       
+
+        <SectionWrapper delay={0.1}>
+          <section id="team">
+            <Teams />
+          </section>
         </SectionWrapper>
 
         <SectionWrapper delay={0.2}>
@@ -119,11 +143,15 @@ export default function Page() {
         </SectionWrapper>
 
         <SectionWrapper delay={0.1}>
-          <Pricing />
+          <section id="pricing">
+            <Pricing />
+          </section>
         </SectionWrapper>
 
         <SectionWrapper delay={0.2}>
-          <ContactForm />
+          <section id="contact">
+            <ContactForm />
+          </section>
         </SectionWrapper>
 
         <SectionWrapper delay={0.1}>

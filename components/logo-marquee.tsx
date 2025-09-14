@@ -59,7 +59,7 @@ export function LogoMarquee() {
   )
 
   return (
-    <section className="text-white py-16 sm:py-20 overflow-hidden">
+    <section className="text-white py-16 sm:py-20 overflow-hidden ">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="flex flex-col items-center justify-between mb-12 sm:flex-row sm:items-center">
