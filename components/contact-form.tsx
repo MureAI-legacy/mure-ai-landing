@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+import emailjs from "@emailjs/browser"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -11,6 +12,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge"
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, Users } from "lucide-react"
+
 
 interface FormData {
   name: string
@@ -42,10 +44,13 @@ export function ContactForm() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
+    // Clear error when user starts typing
+    if (error) setError(null)
   }
 
   const handleProjectTypeSelect = (type: string) => {
@@ -56,24 +61,49 @@ export function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!)
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      // Prepare template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company,
+        phone: formData.phone,
+        project_type: formData.projectType,
+        message: formData.message,
+        to_email: "dev.mureai@mureai.com", // Your email where you want to receive the form submissions
+      }
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        projectType: "",
-        message: "",
-      })
-    }, 3000)
+      // Send email using EmailJS
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        templateParams
+      )
+
+      setIsSubmitting(false)
+      setIsSubmitted(true)
+
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setError(null)
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          projectType: "",
+          message: "",
+        })
+      }, 3000)
+    } catch (error) {
+      console.error("Error sending email:", error)
+      setIsSubmitting(false)
+      setError("There was an error sending your message. Please try again.")
+    }
   }
 
   return (
@@ -250,7 +280,7 @@ export function ContactForm() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="bg-black/20 border-white/10 text-white placeholder:text-white/40 focus:border-brand-lime-300/50 focus:ring-brand-lime-300/20"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+358 (50)123 1234"
                       />
                     </div>
                   </div>
@@ -290,6 +320,12 @@ export function ContactForm() {
                       placeholder="Describe your current workflow challenges and what you'd like to automate..."
                     />
                   </div>
+
+                  {error && (
+                    <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+                      <p className="text-red-400 text-sm">{error}</p>
+                    </div>
+                  )}
 
                   <Button
                     type="submit"

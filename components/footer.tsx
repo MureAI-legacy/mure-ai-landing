@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { Instagram, Twitter, Youtube, MessageCircle } from "lucide-react"
+import { Instagram, Twitter, Youtube, MessageCircle, Linkedin } from "lucide-react"
 import Image from "next/image"
 
 interface FooterContent {
@@ -57,7 +57,7 @@ export function AppverseFooter() {
               <div>
                 <h5 className="mb-2 text-xs font-semibold uppercase tracking-widest text-neutral-400">Navigation</h5>
                 <ul className="space-y-2 text-sm text-neutral-300">
-                  {["Home", "Features", "Testimonials", "Pricing", "Blog", ].map((item) => (
+                  {["Home", "Features", "Team", "Contact", ].map((item) => (
                     <li key={item}>
                       <Link href={`#${item.toLowerCase()}`} className="hover:text-white hover:scale-110 transition-all duration-300">
                         {item}
@@ -69,18 +69,20 @@ export function AppverseFooter() {
               <div>
                 <h5 className="mb-2 text-xs font-semibold uppercase tracking-widest text-neutral-400">Social media</h5>
                 <ul className="space-y-2 text-sm text-neutral-300">
+
                   <li className="flex items-center gap-2">
-                    <Twitter className="h-4 w-4 text-neutral-400" />
+                    <Linkedin className="h-4 w-4 text-neutral-400" />
                     <a
-                      href="https://twitter.com/mureai"
+                      href="https://www.linkedin.com/company/mure-ai"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-white transition-all duration-300"
                       aria-label="Follow MureAI on Twitter"
                     >
-                      X/Twitter
+                      LinkedIn
                     </a>
                   </li>
+                  {/* 
                   <li className="flex items-center gap-2">
                     <Youtube className="h-4 w-4 text-neutral-400" />
                     <a
@@ -92,11 +94,11 @@ export function AppverseFooter() {
                     >
                       YouTube
                     </a>
-                  </li>
+                  </li>*/}
                   <li className="flex items-center gap-2">
                     <Instagram className="h-4 w-4 text-neutral-400" />
                     <a
-                      href="https://instagram.com/mureai"
+                      href="https://instagram.com/mure.ai"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-white  transition-all duration-300"
@@ -104,7 +106,8 @@ export function AppverseFooter() {
                     >
                       Instagram
                     </a>
-                  </li>
+                  </li> 
+                  {/*
                   <li className="flex items-center gap-2">
                     <MessageCircle className="h-4 w-4 text-neutral-400" />
                     <a
@@ -116,7 +119,7 @@ export function AppverseFooter() {
                     >
                       Threads
                     </a>
-                  </li>
+                  </li>*/}
                 </ul>
               </div>
             </div>

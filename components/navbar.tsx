@@ -12,7 +12,7 @@ export function SiteHeader() {
     { href: "/", label: "Home", icon: Briefcase },
     { href: "/#about", label: "About", icon: Info },
     { href: "/#services", label: "Services", icon: Tag },
-    { href: "/faq", label: "FAQ", icon: HelpCircle },
+    
     { href: "/#contact", label: "Contact", icon: FileText },
     
   ]

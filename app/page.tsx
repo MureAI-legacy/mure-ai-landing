@@ -127,13 +127,13 @@ export default function Page() {
           <section id="process">
             <WorkflowSteps />
           </section>
-        </SectionWrapper>
+        </SectionWrapper> 
 
-        <SectionWrapper delay={0.1}>
+        {/* <SectionWrapper delay={0.1}>
           <section id="blog">
             <BlogPost />
           </section>
-        </SectionWrapper>
+        </SectionWrapper> */}
 
         <SectionWrapper delay={0.1}>
           <section id="team">

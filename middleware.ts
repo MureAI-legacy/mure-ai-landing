@@ -2,10 +2,46 @@ import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 
 export function middleware(request: NextRequest) {
-  // Only check admin routes, not the login page
+  const { pathname } = request.nextUrl
+
+  // Allow home page, API routes, and static files
+  const allowedPaths = [
+    "/", // Home page
+    "/api", // API routes
+    "/_next", // Next.js internal routes
+    "/favicon.ico", // Favicon
+    "/robots.txt", // Robots.txt
+    "/sitemap.xml", // Sitemap
+    "/icons", // Icons directory
+    "/images", // Images directory
+    // Allow all static files from public directory
+    "/andre.webp",
+    "/andre.jpg", 
+    "/placeholder-logo.png",
+    "/placeholder-logo.svg",
+    "/placeholder-user.jpg",
+    "/placeholder.jpg",
+    "/placeholder.svg",
+    "/atmojo.webp",
+    "/ahmed.webp",
+    "/duc.webp",
+    "/yun.webp"
+  ]
+
+  // Check if the current path is allowed
+  const isAllowed = allowedPaths.some(path => 
+    pathname === path || pathname.startsWith(path + "/")
+  )
+
+  // If not allowed, redirect to home page
+  if (!isAllowed) {
+    return NextResponse.redirect(new URL("/", request.url))
+  }
+
+  // Keep existing admin authentication logic
   if (
-    request.nextUrl.pathname === "/admin" ||
-    (request.nextUrl.pathname.startsWith("/admin/") && !request.nextUrl.pathname.startsWith("/admin/login"))
+    pathname === "/admin" ||
+    (pathname.startsWith("/admin/") && !pathname.startsWith("/admin/login"))
   ) {
     // Check for admin session cookie
     const adminSession = request.cookies.get("admin-session")
@@ -20,5 +56,13 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    "/((?!_next/static|_next/image|favicon.ico).*)",
+  ],
 }

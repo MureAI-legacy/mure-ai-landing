@@ -15,7 +15,7 @@ export function AppDescription() {
     >
       <a href="#404" target="_blank" rel="noopener noreferrer" className="relative z-10">
         <span className="relative z-10 transition-colors duration-300 group-hover:text-lime-300">
-          Try Now
+          Coming Soon
         </span>
         {/* Animated background gradient */}
         <div className="absolute inset-0 bg-gradient-to-r from-brand-lime-300 via-brand-lime-400 to-brand-lime-300 opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-0"></div>
@@ -76,7 +76,7 @@ export function AppDescription() {
                 <div className="relative aspect-[9/19] w-full overflow-hidden rounded-2xl bg-black group-hover:ring-2 group-hover:ring-brand-lime-300/50 transition-all duration-500">
                   {/* Lazy-loaded video fills the screen */}
                   <LazyVideo
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Timeline%202-YFaCK7cEiHWSMRv8XEHaLCoYj2SUAi.mp4"
+                    src="https://ymdph2vmzawfnfad.public.blob.vercel-storage.com/platfrom1.mp4"
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     autoplay={true}
                     loop={true}

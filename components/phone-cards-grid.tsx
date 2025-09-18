@@ -68,7 +68,7 @@ const phoneData = [
     tone: "insights",
     gradient: "from-[#001028] via-[#0b355e] to-[#052e5e]",
     videoSrc:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Timeline%201-Ku3Y2Hgaw8hCiFEFg1ELtYp631rSzR.webm",
+      "",
   },
   {
     title: "No-Code",

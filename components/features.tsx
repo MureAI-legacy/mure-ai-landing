@@ -42,7 +42,7 @@ const services = [
     ],
     gradient: "from-yellow-500/10 to-orange-500/10",
     iconColor: "text-lime-300",
-    video: "https://ymdph2vmzawfnfad.public.blob.vercel-storage.com/abstract.mp4",
+    video: "https://ymdph2vmzawfnfad.public.blob.vercel-storage.com/workflow1.mp4",
   },
   {
     icon: ChatBubbleLeftRightIcon,
@@ -60,7 +60,7 @@ const services = [
   {
     icon: UserGroupIcon,
     title: "Social Media Automation",
-    description: "Manage high-volume comments, posts, and crises with AI that knows your brand voice.",
+    description: "Manage high-volume comments, posts and messages with AI that knows your brand voice.",
     features: ["Real-time comment replies", "Brand sentiment monitoring", "Auto content scheduling"],
     gradient: "from-pink-500/10 to-rose-500/10",
     iconColor: "text-lime-300",
