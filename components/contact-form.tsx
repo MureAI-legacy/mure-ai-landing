@@ -4,7 +4,6 @@ import type React from "react"
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import emailjs from "@emailjs/browser"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -62,26 +61,25 @@ export function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // Initialize EmailJS with your public key
-      emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!)
+      // Send email via secure server-side API route
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          projectType: formData.projectType,
+          message: formData.message,
+        }),
+      })
 
-      // Prepare template parameters
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        company: formData.company,
-        phone: formData.phone,
-        project_type: formData.projectType,
-        message: formData.message,
-        to_email: "dev.mureai@mureai.com", // Your email where you want to receive the form submissions
+      if (!response.ok) {
+        throw new Error('Failed to send email')
       }
-
-      // Send email using EmailJS
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        templateParams
-      )
 
       setIsSubmitting(false)
       setIsSubmitted(true)
